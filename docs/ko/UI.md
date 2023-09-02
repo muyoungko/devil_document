@@ -119,13 +119,15 @@ Jevil.scrollEnd('list', function(){
 ## Jevil.scrollTo
 
 리스트의 스크롤을 특정 인덱스로 이동한다
+해당 셀이 리스트의 최상단으로 올라간다
+셀을 아래 배치하고 싶으면 offset변수로 조절한다
+셀을 중앙으로 배치하거나 하단으로 배치하는 옵션은 추가 예정
 
 - Jevil.scrollTo(node, index, param)
 
 #### parameter
 
 - node `string` `require` 리스트 노드 
-null일경우 화면리스트를 가리킨다
 - index `int` `require` 행인덱스
 - param `json` `optional` 스크롤 옵션
   - offset `int` `optional` cell이 top을 기준으로 얼마나 아래로 이동하느냐
@@ -136,7 +138,7 @@ null일경우 화면리스트를 가리킨다
 ```javascript
 Jevil.scrollTo('list', index)
 
-Jevil.scrollTo(null, index, {animation:true})
+Jevil.scrollTo('list', index, {animation:true})
 ```
 
 
