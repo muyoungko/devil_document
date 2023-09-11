@@ -12,6 +12,8 @@ Open popup with block content
     - title `string`  Popup Title
     - yes `string`  Yes button text
     - no `string`  No button text
+    - yes_node `string`  Yes node name in sketch
+    - no_node `string`  No node name in sketch
     - show `string`  Default is 'center'
 'bottom' - show up from bottom
 'top' - show up from top
