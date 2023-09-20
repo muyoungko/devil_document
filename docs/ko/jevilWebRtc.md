@@ -18,9 +18,23 @@
     AWS accessKeyId 이며, kinesis 관련된 권한만 할당하길 권장한다(클라이언트에 노출되므로)
     - secretAccessKey : `string` `require` 
     AWS secret Access Key 이며, kinesis 관련된 권한만 할당하길 권장한다(클라이언트에 노출되므로)
-    - channelInfo : `string` `require` 
+    - channelInfo : `json` `require` 
     AWS Kinesis 채널에 관련된 정보로서 다음과 같다
+    channelInfo Example 참조
+    - isMaster : `string` `require`
+    마스터 여부
+    - isAudioSent : `string` `require` 
+    오디오 송출여부
+    - isVideoSent : `double` `require`
+    비디오 송출여부
+    - clientId : `string` `optional` 
+    web rtc에 접속할 clinetId이며, null일경우 랜덤하게 결정된다
     
+- callback `function` `require` 
+    - event `string` `require`  이벤트 종류
+    - data `json` `require`  이벤트의 상세 정보
+    
+#### channelInfo Example
 ```javascript
 let channelInfo = {
   "ResourceEndpointList": [
@@ -62,20 +76,6 @@ let channelInfo = {
 }
 ```
 
-    - isMaster : `string` `require`
-    마스터 여부
-    - isAudioSent : `string` `require` 
-    오디오 송출여부
-    - isVideoSent : `double` `require`
-    비디오 송출여부
-    - clientId : `string` `optional` 
-    web rtc에 접속할 clinetId이며, null일경우 랜덤하게 결정된다
-    
-- callback `function` `require` 
-    - event `string` `require`  이벤트 종류
-    - data `json` `require`  이벤트의 상세 정보
-    
-
 #### Example code
 ```javascript
 function start_viewer_video() {
@@ -99,3 +99,5 @@ function start_viewer_video() {
   })
 }
 ```
+
+특정 뷰를 web rtc 뷰로 만드는 법은 blockRule WebRtc 참조

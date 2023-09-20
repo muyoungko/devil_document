@@ -9,7 +9,8 @@
 
 - DAB Web Console
   - [Screen](ko/screen.md)
-  - [Block](ko/block.md)
+  - [기본 Block](ko/block.md)
+  - [추가 Block](ko/block_extension.md)
   - [Block Condition](ko/block.md)
   - [Deploy](preparing.md)
   - [Development](ko/development.md)
