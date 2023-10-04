@@ -39,6 +39,7 @@
   - [Util](ko/Util.md)
   - [WIFI](ko/WIFI.md)
   - [Web](ko/Web.md)
+  - [Map](ko/GoogleMap.md)
   - [JevilToss](ko/jeviltoss.md)
   - [JevilWebRtc](ko/jevilWebRtc.md)
 

@@ -57,3 +57,19 @@ Sketch의 특정 노드를 블록으로 등록한다
 #### Hidden
 Block Contition 에 따라 
 
+
+#### Map
+
+구글 맵은 Google Map 룰로 뷰를 지정한 후 다양한 컨트롤을 한다
+
+- (Eject일 경우에만)
+구글 클라우드에서 API 인증서를 발급받아야하며, 안드로이드의 경우 디버그 인증서와, 배포 인증서 둘다 입력해야 잘 동작한다
+Eject입력 위치
+- 아이폰은 ... TODO
+
+파라미터
+- Target Node - Map으로 만들 스캐치 노드 
+- Map Type - 현재는 구글만 있다
+- Start Location Data Path - Json data path(Map)을 지정하는데,  lan, lat, zoom을 참조한다
+
+이후 맵에 마커를 추가한다거나, 센터 위치를 변경하는 것은 Jevil.mapAddMarker Jevil.mapCenter 등의 함수를 이용한다
