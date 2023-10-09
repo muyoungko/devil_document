@@ -38,6 +38,21 @@ Jevil.mapAddMarker('map', {
 ```
 
 
+#### Example code
+```javascript
+Jevil.mapAddMarker('map', {
+    key:'2',
+    lat:37.541,
+    lng:126.906,
+    title:'This is Seoul',
+    type:'bubble',
+    color:'orange',
+  }, function(res) {
+    
+  }) 
+```
+
+![Alt text](googlemap-bubble.png)
 
 ## Jevil.mapUpdateMarker
 
@@ -132,7 +147,7 @@ Jevil.mapAddCircle('map', {
     
   }) 
 ```
-
+![Alt text](image.png)
 
 ## Jevil.mapRemoveCircle
 
