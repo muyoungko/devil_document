@@ -67,22 +67,17 @@ default - false
 
 #### Example code
 ```javascript
-Jevil.cameraQr(
+function qr() {
+  Jevil.cameraQr(
     {
-      blockName:'qr',
-      startFront:true,
+      startFront:false,
     },
     function(result){
       if(result.r) {
-        Jevil.startLoading()
-        Jevil.getThen('/api/Coupon/Coup_inf_cd=' + result.code, function(res) {
-          Jevil.stopLoading()  
-          if(res && res.result == 1) {
-            Jevil.toast('쿠폰이 사용처리 되었습니다')
-          }
-        })
+        Jevil.alert(result.code)
       }
   })
+}
 ```
 
 
