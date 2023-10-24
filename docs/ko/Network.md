@@ -208,8 +208,10 @@ URL을 다운받아 앱의 문서 폴더에 저장한다
     - showProgress : `boolean` `optional` 다운로드 팝업이 뜰지 말지를 결정 `default` false
     - destFileName `string` `require` 저장될 파일 명
 - callback `function` `require` 
-    - res `json` `require` r : 성공여부
-dest : 저장된 파일 path
+    - res `json` 
+        - r `boolean` 성공여부
+        - dest `string` 저장된 파일 path
+        - size `Integer` 파일 사이즈
 
 #### Example code
 ```javascript
