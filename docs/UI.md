@@ -308,6 +308,28 @@ Jevil.videoViewAutoPlay()
 ```
 
 
+## Jevil.videoCallback
+
+VideoView callback으로 현재는 ready만 된다
+
+- Jevil.videoCallback(node, event, function)
+
+#### parameter
+
+- node `string` `require` VideoView의 노드 명
+- event `string` `require` 콜백을 받을 이벤트
+ [click|map_click|camera|drag_start|drag_end]
+- callback `function` `require` 콜백 함수
+    - res
+        - 아직없음
+
+#### Example code
+```javascript
+Jevil.videoCallback('video', 'ready', function(res) {
+    Jevil.update()
+})
+  
+```
 
 
 ## Jevil.webLoad

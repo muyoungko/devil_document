@@ -308,33 +308,27 @@ Jevil.videoViewAutoPlay()
 ```
 
 
+## Jevil.videoCallback
 
+VideoView callback으로 현재는 ready만 된다
 
-## Jevil.webLoad
-
-webview에서 urlload할때  마다 호출된다. 이 함수는 단일 블록 스크린에서만 실행 가능하다
-그리고 최초 스크립트에서 실행할 수 없고 비동기로 실행 되어야 한다
-
-두번째 파라미터는 반드시 true 나 false를 반환해야하며, true를 반환할 시 그 url을 로드되지 않는다
-
-- Jevil.webLoad(node, callback)
+- Jevil.videoCallback(node, event, function)
 
 #### parameter
 
-- node `string` `require` WebView 노드 명
-    - url `string` `require` 로드될 url
-- callback `function` `require` 
-    - url `string` `require` webView에 로드되는 url
+- node `string` `require` VideoView의 노드 명
+- event `string` `require` 콜백을 받을 이벤트
+ [click|map_click|camera|drag_start|drag_end]
+- callback `function` `require` 콜백 함수
+    - res
+        - 아직없음
 
 #### Example code
 ```javascript
-Jevil.webLoad('web', function(url){
-     if(url.includes('bookplay.do')){
-   return true;
-}
-      return false;
+Jevil.videoCallback('video', 'ready', function(res) {
+    Jevil.update()
 })
+  
 ```
-
 
 
