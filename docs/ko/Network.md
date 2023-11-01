@@ -272,7 +272,12 @@ Jevil.uploadS3(['/file/path1', '/file/path2'], function(result) {
         uploadedFile : [
             {
                 original : '/file/path1',
-                key : 'media/test/mp4',
+                key : 'media/1.mp4',
+                success : true
+            },
+            {
+                original : '/file/path2',
+                key : 'media/2.mp4',
                 success : true
             }
         ]

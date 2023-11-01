@@ -20,11 +20,10 @@ Open camera for taking picture or video
 - callback `function` `require` 
     - result `json`
       - r `boolean` Complete or cancel
-      - list `array` Selcted Image or Video List
-        - type `String` content type [image|video] 
-        - image `String` local file path of image jpeg
-        - preview `String` local file path of video preview jpeg
-        - video `String` local file path of video video mp4
+      - type `String` content type [image|video] 
+      - image `String` local file path of image jpeg
+      - preview `String` local file path of video preview jpeg
+      - video `String` local file path of video video mp4
 
 #### Example code
 ```javascript
