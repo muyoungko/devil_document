@@ -9,6 +9,12 @@ Screen에는 Javscript 영역이 있다
 
 Javascript 영역은 Screen에 진입했을 때 실행 되며, 에서 Jevil함수를 이용하거나, 클릭했을 때 처리 함수를 정의(Block 에서 호출) 등의 코드 들이 들어간다
 
+## Sketch Artboard를 Screen으로 만들기
+
+App > Sktch 에서 해당 Sketch로 들어가면 아직 만들어지지 않은 artboard 목록이 뜸(안뜨면 그 화면을 리프래시 한번 해준다)
+해당 artboard를 누른 후 [YES]를 누르면 screen이  손쉽게 생성된다
+![Alt text](screen1.png)
+
 ## Screen 설정
 
 ![Alt text](screen-image2.png)
