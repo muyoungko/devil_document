@@ -22,16 +22,27 @@ Jevil.back()
 데이터를 전달하는 방식은 부모의 화면의 callback 함수를 호출한다
 
 
-- Jevil.finish(undifined)
+- Jevil.finish(json)
 
 #### parameter
 
-- undifined `json` `require` 
+- json `json` `optional` 
+  - to `string` `optional` screen_name to back
 
 #### Example code
 ```javascript
+Jevil.finish()
+```
+
+#### Finish To specific screen
+```javascript
+Jevil.finish({to:'music_list'})
+```
+
+#### Finish With Callback
+```javascript
 Jevil.finish({
-  searchResult:'ok'
+  searchResult:'keyword'
 })
 
 //부모 화면
