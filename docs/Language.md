@@ -37,13 +37,13 @@ Jevil.setLanguage('ko')
 ```
 
 
-## Jevil.trans
+## Jevil.languageTrans
 
 특정 키에 대한 번역 텍스트를 준다
 번역이 없으면 key를 그대로 반환한다 
+보통 이건 Dynamic텍스를 번역할때 사용한다 example code를 참조하세요
 
-
-- Jevil.trans(key)
+- Jevil.languageTrans(key)
 
 #### parameter
 
@@ -51,7 +51,11 @@ Jevil.setLanguage('ko')
 
 #### Example code
 ```javascript
-let text = Jevil.trans('안녕하세요')
+let text = Jevil.languageTrans('안녕하세요')
 if(text == 'Hello')
     ;
+
+let text = Jevil.languageTrans('안녕하세요') + ' ' + data.member_name + Jevil.languageTrans('님') + ' '+ Jevil.languageTrans('좋은아침입니다')
+Jevil.alert(text)
+
 ```
