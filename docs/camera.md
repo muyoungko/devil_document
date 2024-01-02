@@ -24,6 +24,8 @@ Open camera for taking picture or video
       - image `String` local file path of image jpeg
       - preview `String` local file path of video preview jpeg
       - video `String` local file path of video video mp4
+      - lat `Double` gps latitude (gps : true)
+      - lng `Double` gps longtitude (gps : true)
 
 #### Example code
 ```javascript
@@ -103,6 +105,10 @@ Jevil.cameraQrClose()
 
 갤러리로부터 사진 입력을 받는다
 
+gps 를 이용하여 사진 위치 좌표를 가져오려면 Android의 경우
+<uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+퍼미션을 넣어야한다
+
 - Jevil.gallery(param, callback)
 
 #### parameter
@@ -114,7 +120,8 @@ Jevil.cameraQrClose()
     - maxSec `int`  비디오 선택시 최대 재생시간
     - min `int` `require` 갤러리 선택시 최소 선택 개수
     - max `int` `require` 갤러리 선택시 최대 선택 개수
-    - title `string`  사진 선택시 상단에 나올 제목
+    - title `string` 사진 선택시 상단에 나올 제목
+    - gps `boolean` 겔러리 사진 선택시 GPS 좌표도 가져올지 여부
 - callback `function` `require` 
     - result `json`
       - r `boolean` Complete or cancel
@@ -123,6 +130,8 @@ Jevil.cameraQrClose()
         - image `String` local file path of image jpeg
         - preview `String` local file path of video preview jpeg
         - video `String` local file path of video video mp4
+        - lat `Double` gps latitude (gps : true)
+        - lng `Double` gps longtitude (gps : true)
 
 #### Example code
 ```javascript
