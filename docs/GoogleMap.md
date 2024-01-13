@@ -21,6 +21,10 @@
     - type : `string` `optional` 마커 타입, [normal|burble] buble일 경우 title이 마커에 바로 보이게 된다. default는 normal이며, 일반적인 화살표 마커이다
     - color : `string` `optional` bubble 마커일 경우 이 마커의 말풍선 색깔 
     [blue|white|red|green|purple|orangle|default]
+    - url : `string` `optional` 커스텀 이미지를 이용하여 마커를 구성하고 싶을때 온라인 이미지 url을 넣는다
+    - url_image_width : `integer` `optional` 커스텀이미지가 표시될 사이즈의 width를 sketch size로 넣어준다. height는 동일 비율로 결정된다
+
+
 - callback `function` `require` 
     - 지금은 안쓰인다
 
@@ -52,6 +56,20 @@ Jevil.mapAddMarker('map', {
   }) 
 ```
 
+```javascript
+Jevil.mapAddMarker('map', {
+    key:'2',
+    lat:37.541,
+    lng:126.906,
+    title:'This is Seoul',
+    type:'image',
+    url:'http://',
+  }, function(res) {
+    
+  }) 
+```
+
+
 ![Alt text](googlemap-bubble.png)
 
 ## Jevil.mapUpdateMarker
@@ -79,6 +97,8 @@ param 의 용도는 Jevil.mapAddMarker와 같다
     [normal|burble] buble일 경우 title이 마커에 바로 보이게 된다. default는 normal이며, 일반적인 화살표 마커이다
     - color : `string` `optional` bubble 마커일 경우 이 마커의 말풍선 색깔 
     [blue|white|red|green|purple|orangle|default]
+    - url : `string` `optional` 커스텀 이미지를 이용하여 마커를 구성하고 싶을때 온라인 이미지 url을 넣는다
+    - url_image_width : `integer` `optional` 커스텀이미지가 표시될 사이즈의 width를 sketch size로 넣어준다. height는 동일 비율로 결정된다
 - callback `function` `require` 
     - 지금은 안쓰인다
 
