@@ -64,6 +64,7 @@ Jevil.mapAddMarker('map', {
     title:'This is Seoul',
     type:'image',
     url:'http://',
+    url_image_width : 30,
   }, function(res) {
     
   }) 
