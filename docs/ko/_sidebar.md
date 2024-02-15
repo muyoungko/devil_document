@@ -8,6 +8,7 @@
   - [제작 시 유의점](ko/sketchguide.md)
 
 - DAB Web Console
+  - [Project](ko/project.md)
   - [Screen](ko/screen.md)
   - [기본 Block](ko/block.md)
   - [추가 Block](ko/block_extension.md)
